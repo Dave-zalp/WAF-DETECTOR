@@ -1,6 +1,6 @@
 # WAF-DETECTOR 
 
-## Made by Moratadave
+## A python script used to detect WAFs on a web Application
 
 ## What is a WAF
 
