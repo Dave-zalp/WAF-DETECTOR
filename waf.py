@@ -1,5 +1,15 @@
 import requests
 import re
+import time
+
+banner = """  _____   _    _     ____   _    ____  _   _ ____  
+|__  /  / \  | |   |  _ \ / \  |  _ \| | | / ___| 
+  / /  / _ \ | |   | |_) / _ \ | |_) | | | \___ \ 
+ / /_ / ___ \| |___|  __/ ___ \|  _ <| |_| |___) |
+/____/_/   \_\_____|_| /_/   \_\_| \_\\___/|____/                    """
+
+print(banner)
+time.sleep(5)
 
 url1 = input('Enter Url of the website("https://example.com")')
 def inputurl (url1):
@@ -19,7 +29,10 @@ def validate(validated_url):
 def readcontent(par):
     try:
         r = requests.get(par)
-        print(r.status_code)
+        f = open('content.txt' , 'w')
+        f.write(str(r.content))
+        f.close()
+        print('[+] File written to context.txt Successfully')
     except requests.exceptions.ConnectionError:
         print("[-] An error Occured trying to access the page")
         pass
