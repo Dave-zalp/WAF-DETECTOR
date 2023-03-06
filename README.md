@@ -1,6 +1,6 @@
 # WAF-DETECTOR 
 
-## A python script used to detect WAFs on a web Application
+## A python script used to detect Web application Firewalls on a web Application
 
 ## What is a WAF
 
